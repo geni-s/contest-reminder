@@ -65,7 +65,7 @@ npm install
 ```env
 TWILIO_SID=your_twilio_sid
 TWILIO_AUTH=your_twilio_auth_token
-TWILIO_PHONE=your_twilio_phone_number
+TO_PHONE=your_phone_number
 ```
 
 ---
