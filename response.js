@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+
 const twilio = require('twilio');
 require('dotenv').config();
 const accountSid = process.env.TWILIO_SID;
@@ -12,13 +12,15 @@ function sendsms(contest) {
     .create({
       body: 'heyy ur contest is starting soon.....',
       messagingServiceSid: 'MGb1bdc1ab0eece55ed0527938140ce638',
-      to: '+9199999.....'
+      to: process.env.TO_PHONE
     })
     .then(message => console.log(message.sid));
 }
 
 
 async function checkcontest() {
+  const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
   const res = await fetch("https://competeapi.vercel.app/contests/upcoming/");
   const data = await res.json();
   const now = new Date();
@@ -32,6 +34,8 @@ async function checkcontest() {
     }
   });
 }
+
+
 
 checkcontest();
 
