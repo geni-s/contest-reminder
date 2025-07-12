@@ -1,4 +1,4 @@
-const CLIENT_ID = "140938689096-9bmpdvn640s6234st32dc06o4gn8rr72.apps.googleusercontent.com";
+const CLIENT_ID = process.env.CLIENT_ID;
 window.accessToken = "";
 
 window.onload = () => {
