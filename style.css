@@ -24,3 +24,23 @@ a {
   color: #007bff;
   font-weight: bold;
 }
+.urs{
+  display: flex;
+  justify-content: space-around;
+}
+.urs button {
+  border-radius: 25px;
+  height: 40px;
+  padding: 0 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 14px;
+}
+
+.urs button:hover {
+  background-color: #0056b3;
+}
